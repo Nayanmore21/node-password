@@ -20,5 +20,4 @@ const generatePassword=(length,chars)=>{
 }
 
 
-
 export default createPassword
