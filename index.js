@@ -1,11 +1,11 @@
 import { program } from 'commander'
+import { Chalk } from 'chalk'
 const log=console.log
 import createPassword from './utils/createPassword.js'
 
 program.version('1.0.0').description('Simple Password Generator')
 
 program
-
 .option('-l,--length <number>','length of password','8')
 .option('-s,--save','save passwords to passwords.txt')
 .option('-nn,--no-numbers','remove numbers')
@@ -19,4 +19,4 @@ const {length,save,numbers,symbols}=program.opts()
 const generatedPassword=createPassword(length,numbers,symbols)
 
 //output generated
-log(generatedPassword)
+log(Chalk.blue('Generated password:') + Chalk.bold(generatedPassword))
