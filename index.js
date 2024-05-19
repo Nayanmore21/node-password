@@ -1,5 +1,6 @@
 import { program } from 'commander'
-
+const log=console.log
+import createPassword from './utils/createPassword.js'
 
 program.version('1.0.0').description('Simple Password Generator')
 
@@ -14,3 +15,8 @@ program
 const {length,save,numbers,symbols}=program.opts()
 
 
+//get generated password
+const generatedPassword=createPassword(length,numbers,symbols)
+
+//output generated
+log(generatedPassword)
