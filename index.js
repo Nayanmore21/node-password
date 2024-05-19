@@ -1,5 +1,5 @@
+import chalk from 'chalk'
 import { program } from 'commander'
-import { Chalk } from 'chalk'
 const log=console.log
 import createPassword from './utils/createPassword.js'
 
@@ -19,4 +19,4 @@ const {length,save,numbers,symbols}=program.opts()
 const generatedPassword=createPassword(length,numbers,symbols)
 
 //output generated
-log(Chalk.blue('Generated password:') + Chalk.bold(generatedPassword))
+log(chalk.blue('Generated password:') + chalk.yellow(chalk.bold(generatedPassword)))
